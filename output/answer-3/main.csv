@@ -1,0 +1,7 @@
+import pandas as pd
+input_file="/input/question-3/main.csv"
+output_file="/output/answer-3/main.csv"
+
+product=pd.read_csv(input_file)
+product=product.sort_values(by=['Red Cards','Yellow Cards'])
+product.to_csv(output_file)
