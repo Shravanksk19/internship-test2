@@ -1,6 +1,6 @@
 #reading csv file
 import pandas as pd
-vegetable = pd.read_csv("main.csv")
+vegetable = pd.read_csv(main.csv)
 
 
 #to check whether our dataset is read using pandas
