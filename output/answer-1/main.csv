@@ -1,0 +1,16 @@
+//reading csv file
+import pandas as pd
+vegetable = pd.read_csv("main.csv")
+
+
+//to check whether our dataset is read using pandas
+vegetable.head(5)
+
+
+//filling missing values (getting the average of each vegetable)
+vegetable["new_avg_price"] = vegetable['price'].fillna(
+   vegetable.groupby('product_description')['price'].transform("mean")
+)
+
+//now the values will get printed. Since it's a long dataset, to check whether our values are updated or not, we can print first 10 values using head function.
+vegetable[vegetable["price"].isna()].head()
