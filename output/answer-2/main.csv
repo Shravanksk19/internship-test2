@@ -1,0 +1,7 @@
+import pandas as pd
+input_file="/input/question-2/main.csv"
+output_file="/output/answer-2/main.csv"
+product=pd.read_csv(input_file)
+
+product["sales_amount"]=product['sales_quantity'].where(product['unit']!="pcs",product['product_description'].str.split('-',expand=True)[1].astype('float')*product['sales_quantity'])
+product.to_csv(output_file)
