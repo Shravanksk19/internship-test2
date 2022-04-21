@@ -4,7 +4,7 @@ vegetable = pd.read_csv(main.csv)
 
 
 #to check whether our dataset is read using pandas
-vegetable.head(5)
+vegetable.head()
 
 
 #filling missing values (getting the average of each vegetable)
